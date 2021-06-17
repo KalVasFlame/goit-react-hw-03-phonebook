@@ -64,9 +64,12 @@ class App extends React.Component {
       <div className={styles.container}>
         <h1>Phonebook</h1>
         <ContactForm onSubmit={this.onFormSubmit} />
-        <h2>Contacts</h2>
-        <Filter value={filter} onFilter={this.onFilterInput} />
-        <ContactsList contacts={contacts} onDeleteClick={this.onDeleteContactClick} />
+
+        <>
+          <h2>Contacts</h2>
+          <Filter value={filter} onFilter={this.onFilterInput} />
+          <ContactsList contacts={contacts} onDeleteClick={this.onDeleteContactClick} />
+        </>
       </div>
     )
   }
